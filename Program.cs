@@ -16,7 +16,7 @@ namespace IanAdairPlumbingAndHeating
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddEngineer());
+            Application.Run(new frmMenu());
         }
     }
 }
