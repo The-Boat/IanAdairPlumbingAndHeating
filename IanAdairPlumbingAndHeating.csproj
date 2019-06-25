@@ -55,12 +55,6 @@
     <Compile Include="frmInvoiceReports.Designer.cs">
       <DependentUpon>frmInvoiceReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMenu.Designer.cs">
-      <DependentUpon>frmMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmNewInvoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,12 +66,6 @@
     </Compile>
     <Compile Include="frmViewCustomers.Designer.cs">
       <DependentUpon>frmViewCustomers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmViewEngineers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmViewEngineers.Designer.cs">
-      <DependentUpon>frmViewEngineers.cs</DependentUpon>
     </Compile>
     <Compile Include="frmViewInvoices.cs">
       <SubType>Form</SubType>
@@ -99,7 +87,6 @@
     </Compile>
     <Compile Include="Invoice.cs" />
     <Compile Include="Job.cs" />
-    <Compile Include="JobVisit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Visit.cs" />
@@ -112,20 +99,8 @@
     <EmbeddedResource Include="frmInvoiceReports.resx">
       <DependentUpon>frmInvoiceReports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMenu.resx">
-      <DependentUpon>frmMenu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmNewInvoice.resx">
       <DependentUpon>frmNewInvoice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmViewCustomers.resx">
-      <DependentUpon>frmViewCustomers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmViewEngineers.resx">
-      <DependentUpon>frmViewEngineers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmViewInvoices.resx">
-      <DependentUpon>frmViewInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
