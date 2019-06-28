@@ -8,7 +8,7 @@ namespace IanAdairPlumbingAndHeating
 {
     class Visit
     {
-        public Visit(int visitNo, float travel, float timeOnSite, float milage, bool doubleTime, bool timeAndAHalf, DateTime visitDate, Engineer eng)
+        public Visit(int visitNo, double travel, double timeOnSite, double milage, bool doubleTime, bool timeAndAHalf, DateTime visitDate, Engineer eng)
         {
             VisitNo = visitNo;
             Travel = travel;
@@ -21,14 +21,37 @@ namespace IanAdairPlumbingAndHeating
         }
 
         public int VisitNo { get; set; }
-        public float Travel { get; set; }
-        public float TimeOnSite { get; set; }
-        public float Milage { get; set; }
+        public double Travel { get; set; }
+        public double TimeOnSite { get; set; }
+        public double Milage { get; set; }
         public bool DoubleTime { get; set; }
         public bool TimeAndAHalf { get; set; }
         public DateTime VisitDate { get; set; }
         public Engineer Eng { get; set; }
 
+        public double getLabourHours()
+        {
+            double totalHours = Travel + TimeOnSite;
+
+            if (DoubleTime)
+            {
+                return totalHours * 48;
+            }
+            else if (TimeAndAHalf)
+            {
+                return totalHours * 36;
+            } 
+            else
+            {
+                return totalHours * 24;
+            }
+        }
+
+        public double getMilageCost()
+        {
+            double milageRate = 0.5;
+            return Milage * milageRate;
+        }
 
     }
 }

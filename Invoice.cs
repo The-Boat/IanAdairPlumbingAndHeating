@@ -20,19 +20,38 @@ namespace IanAdairPlumbingAndHeating
         public float MaterialCost { get; set; }
 
 
-        private float OverallTotal()
+        private double total()
         {
-            return 0;
+            List<Visit> visits = InvJob.Visits;
+
+            double result = 0;
+
+            foreach (Visit v in visits)
+            {
+                result += v.getMilageCost() + v.getLabourHours();
+            }
+
+            if(MaterialCost != 0)
+            {
+                result += MaterialCost;
+            }
+
+            return result;
+
         }
 
-        private float VAT()
+        private double vat()
         {
-            return 0;
+
+            return total() * 0.2;
+
         }
 
-        private float invoiceTotal()
+        private double invoiceTotal()
         {
-            return 0;
+
+            return total() + vat();
+
         }
     }
 }
